@@ -1,0 +1,204 @@
+<!--  Riswana K Muhammed Kunju Rawther - 8805477
+Gayathri Anil - 8758738
+Jaise Babu - 8773912-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Customer Form</title>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <style>
+    body {
+      /* color: aliceblue!important; */
+      background-image: url("background.jpg");
+    }
+
+    .font-btn {
+      float: right;
+    }
+
+    h2{
+      color: white;
+    }
+    
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: rgb(255 255 255);
+      padding: 10px;
+      border: .5px solid black;
+      margin-bottom: 20px;
+    }
+
+    .grid-item {
+      background-color: white;
+      border: 1px solid #00ffc308;
+      padding: 25px;
+      font-size: 25px;
+      text-align: center;
+      color: black;
+      transition: transform .1s;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    .grid-item:hover {
+    transform: scale(1.05); 
+  }
+
+    a {
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #3A3845;
+      text-align: center;
+      font-weight: 600;
+      text-align: center;
+      height: 10rem;
+      color: white;
+      padding-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="font-inc" class="font-btn">A+</button>
+  <button id="font-nor" class="font-btn">A</button>
+  <button id="font-dec" class="font-btn">A-</button>
+  <div class="container" id="details-data">
+
+    <div class="py-5 text-center">
+      <a href="index.html"><img class="d-block mx-auto mb-4" src="logo.png" alt="" width="300" height="180"></a>
+      <h2>Dash Board</h2>
+    </div>
+    <fieldset>
+      <div class="grid-container">
+        <a href="customer.html">
+          <div class="grid-item">Add Customer</div>
+        </a>
+        <a href="customerview.php">
+          <div class="grid-item">View Customers</div>
+        </a>
+        <a href="publisher.html">
+          <div class="grid-item">Add Publisher</div>
+        </a>
+        <a href="publisherview.php">
+          <div class="grid-item">View Publishers</div>
+        </a>
+        <a href="books.php">
+          <div class="grid-item">Add Book</div>
+        </a>
+        <a href="bookview.php">
+          <div class="grid-item">View Books</div>
+        </a>
+        <a href="bookorder.php">
+          <div class="grid-item">Order Book</div>
+        </a>
+        <a href="ordersview.php">
+          <div class="grid-item">View Orders</div>
+        </a>
+        <a href="ordersview.php">
+          <div class="grid-item">Reports</div>
+        </a>
+
+      </div>
+
+    </fieldset>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var min = 8;
+    var max = 50;
+
+    function increaseFontSize() {
+      var elems = document.querySelectorAll('div');
+      var elemh = document.querySelectorAll('h2');
+      for (i = 0; i < elems.length; i++) {
+        if (elems[i].style.fontSize) {
+          var s = parseInt(elems[i].style.fontSize.replace("px", ""));
+        } else {
+          var s = 26;
+        }
+        if (s != max) {
+          s += 1;
+        }
+        elems[i].style.fontSize = s + "px"
+      }
+
+      for (i = 0; i < elemh.length; i++) {
+        if (elemh[i].style.fontSize) {
+          var s = parseInt(elemh[i].style.fontSize.replace("px", ""));
+        } else {
+          var s = 32;
+        }
+        if (s != max) {
+          s += 1;
+        }
+        elemh[i].style.fontSize = s + "px"
+      }
+    }
+
+    function decreaseFontSize() {
+      var elems = document.querySelectorAll('div');
+      var elemh = document.querySelectorAll('h2');
+      for (i = 0; i < elems.length; i++) {
+        if (elems[i].style.fontSize) {
+          var s = parseInt(elems[i].style.fontSize.replace("px", ""));
+        } else {
+          var s = 24;
+        }
+        if (s != max) {
+          s -= 1;
+        }
+        elems[i].style.fontSize = s + "px"
+      }
+
+      for (i = 0; i < elemh.length; i++) {
+        if (elemh[i].style.fontSize) {
+          var s = parseInt(elemh[i].style.fontSize.replace("px", ""));
+        } else {
+          var s = 30;
+        }
+        if (s != max) {
+          s -= 1;
+        }
+        elemh[i].style.fontSize = s + "px"
+      }
+    }
+
+    function normalFontSize() {
+      var elems = document.querySelectorAll('div');
+      var elemh = document.querySelectorAll('h2');
+      for (i = 0; i < elems.length; i++) {
+
+        elems[i].style.fontSize = "25px"
+      }
+      for (i = 0; i < elemh.length; i++) {
+
+        elemh[i].style.fontSize = "31px"
+      }
+    }
+
+
+
+    document.querySelector('#font-inc').addEventListener('click', increaseFontSize);
+
+
+    document.querySelector('#font-dec').addEventListener('click', decreaseFontSize);
+
+    document.querySelector('#font-nor').addEventListener('click', normalFontSize);
+  </script>
+</body>
+<footer>
+  <p> 
+    Gayathri Anil - 8758738
+    Jaise Babu - 8773912
+    Riswana K Muhammed Kunju Rawther - 8805477</p>
+  <p class="footer-text">Copyright 2022 All rights reserved</p>
+</footer>
+
+</html>
