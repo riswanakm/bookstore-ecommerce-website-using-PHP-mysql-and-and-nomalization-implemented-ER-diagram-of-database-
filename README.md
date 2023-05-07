@@ -1,3 +1,3 @@
 # advance-database-design-php
 
-Create bookstore ecommerce website using PHP,mysql and ER diagram
+bookstore ecommerce website using PHP,mysql and and nomalization implemented ER diagram of database design
